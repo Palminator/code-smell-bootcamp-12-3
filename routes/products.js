@@ -33,6 +33,8 @@ router.post("/", (req, res, next) => {
   res.status(201).json(newProduct);
 });
 
+
+/* =====================Homework for Odds bag===================== */
 router.post("/total", (req, res) => {
   var values = body.values;
   var result = total(values);
