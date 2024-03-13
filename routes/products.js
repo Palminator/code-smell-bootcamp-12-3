@@ -18,7 +18,7 @@ router.get("/:id", (req, res, next) => {
   if (!product) {
     return next(createError(404, "Not Found"));
   }
-//   ;
+  //   ;
   res.json(product);
 });
 
@@ -31,15 +31,6 @@ router.post("/", (req, res, next) => {
   const newProduct = { id: "'" + newId + "'", name: body.name, inStock: false };
   products.push(newProduct);
   res.status(201).json(newProduct);
-});
-
-
-/* =====================Homework for Odds bag===================== */
-router.post("/total", (req, res) => {
-  var values = body.values;
-  var result = total(values);
-  var convertResult = convert(result);
-  res.json(convertResult);
 });
 
 module.exports = router;
