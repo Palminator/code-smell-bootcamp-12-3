@@ -18,7 +18,7 @@ router.get("/:id", (req, res, next) => {
   if (!product) {
     return next(createError(404, "Not Found"));
   }
-//   ;
+  //   ;
   res.json(product);
 });
 
@@ -32,20 +32,5 @@ router.post("/", (req, res, next) => {
   products.push(newProduct);
   res.status(201).json(newProduct);
 });
-
-
-/* =====================Homework for Odds bag===================== */
-router.post('/total', (req, res) => {
-  console.log("POST Total");
-  const { body } = req;
-  var values = body.values;
-  console.log("values " + values);
-  var result = total(values);
-  console.log("total " + result);
-  var convertResult = convert(result);
-  console.log("Before return");
-  res.json(convertResult);
-});
-
 
 module.exports = router;
